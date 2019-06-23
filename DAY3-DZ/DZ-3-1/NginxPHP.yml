@@ -1,0 +1,14 @@
+nginx:
+ image: nginx:latest
+ ports:
+ - "8080:80"
+ volumes:
+ - ./site:/site
+ - ./site.conf:/etc/nginx/conf.d/default.conf
+ links:
+ - php
+
+php:
+ image: php:fpm-alpine
+ volumes:
+ - ./site:/site
