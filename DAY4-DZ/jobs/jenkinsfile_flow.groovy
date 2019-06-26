@@ -19,7 +19,7 @@ pipelineJob("my-first-pipeline") {
                   }
               }
         }
-        scriptPath("DAY4-DZ/jenkins/Jenkinsfile")
+        scriptPath("DAY4-DZ/Jenkinsfile")
       }
 
     }
