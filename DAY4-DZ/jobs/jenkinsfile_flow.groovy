@@ -5,17 +5,17 @@ pipelineJob("my-first-pipeline") {
 
     parameters {
       choiceParam('ACTION', ["plan", "apply"], "Choose current action")
-      stringParam('COMMIT_HASH')
+      stringParam('DOCKER_TAGS', defaultValue: 'latest')
       booleanParam('BUILD_IMAGE', true, 'Build image')
     }
 
     definition {
         cpsScm {
-	    scm {
-        	git {
+            scm {
+                git {
                   remote {
-                        github("dgadavin/devops-course-itea", 'https')
-                        branch("master")
+                        github("github.com/denizzzzp/dev-deay2", 'https')
+                        branch("day4-dz")
                   }
               }
         }

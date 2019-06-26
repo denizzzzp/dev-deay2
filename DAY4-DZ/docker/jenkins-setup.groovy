@@ -66,8 +66,8 @@ store = Jenkins.instance.getExtensionList('com.cloudbees.plugins.credentials.Sys
 usernameAndPassword = new UsernamePasswordCredentialsImpl(
     CredentialsScope.GLOBAL,
     "git-hhtp",
-		"",
-    "dgadavin",
+    "",
+    "denizzzzp",
     git_password
 )
 
@@ -120,7 +120,7 @@ def seedJobXml = """<?xml version='1.0' encoding='UTF-8'?>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-      <name>*/master</name>
+      <name>*/day4-dz</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -135,7 +135,7 @@ def seedJobXml = """<?xml version='1.0' encoding='UTF-8'?>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <javaposse.jobdsl.plugin.ExecuteDslScripts plugin="job-dsl@1.52">
-      <targets>jenkins/jobs/*.groovy</targets>
+      <targets>DAY4-DZ/jobs/*.groovy</targets>
       <usingScriptText>false</usingScriptText>
       <ignoreExisting>false</ignoreExisting>
       <ignoreMissingFiles>false</ignoreMissingFiles>
@@ -157,7 +157,7 @@ def seedJobXml = """<?xml version='1.0' encoding='UTF-8'?>
   </buildWrappers>
 </project>
 """
-Jenkins.instance.createProjectFromXML("seed-job", new ByteArrayInputStream(seedJobXml.getBytes()))
+Jenkins.instance.createProjectFromXML("my-seed-job", new ByteArrayInputStream(seedJobXml.getBytes()))
 
 
 def j = Jenkins.instance
