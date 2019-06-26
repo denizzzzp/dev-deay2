@@ -5,14 +5,14 @@ node {
         notifyBuild()
         stage('Checkout') {
             git branch: 'master',
-                url: 'https://github.com/Dgadavin/devops-course-itea.git'
+                url: 'https://github.com/denizzzzp/DAY2-DZ1.git'
 
         }
-        stage('Print Hello') {
-            sh 'echo Hello world'
+        stage('Docker build') {
+            docker build -t day2-dz1:$DOCKER_TAG .
         }
-        stage('Run the tests') {
-            sh 'echo "Hello. here is tests'
+        stage('Docker push') {
+            docker push day2-dz1:$DOCKER_TAG
         }
     } catch (e) {
         sh 'exit 1'
