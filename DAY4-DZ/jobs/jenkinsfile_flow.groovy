@@ -5,6 +5,8 @@ pipelineJob("my-first-pipeline") {
 
     parameters {
       choiceParam('ACTION', ["plan", "apply"], "Choose current action")
+      stringParam('DOCKER_LOGIN', 'denizzzzp')
+      stringParam('DOCKER_PASS', )
       stringParam('DOCKER_TAGS', 'latest')
       booleanParam('BUILD_IMAGE', true, 'Build image')
     }

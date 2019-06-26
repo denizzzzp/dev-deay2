@@ -11,6 +11,9 @@ node {
         stage('Docker build') {
             sh 'docker build -t denizzzzp/day2-dz1:$DOCKER_TAGS .'
         }
+        stage('Docker hub login') {
+            sh 'docker login -u DOCKER_LOGIN -p DOCKER_PASS'
+        }
         stage('Docker push') {
             sh 'docker push denizzzzp/day2-dz1:$DOCKER_TAGS'
         }
