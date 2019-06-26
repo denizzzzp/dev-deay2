@@ -14,7 +14,7 @@ pipelineJob("my-first-pipeline") {
             scm {
                 git {
                   remote {
-                        github("github.com/denizzzzp/dev-deay2", 'https')
+                        github("denizzzzp/dev-deay2", 'https')
                         branch("day4-dz")
                   }
               }
