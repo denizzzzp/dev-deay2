@@ -9,10 +9,10 @@ node {
 
         }
         stage('Docker build') {
-            sh 'docker build -t day2-dz1:DOCKER_TAGS .'
+            sh 'docker build -t denizzzzp/day2-dz1:DOCKER_TAGS .'
         }
         stage('Docker push') {
-            sh 'docker push day2-dz1:$DOCKER_TAGS'
+            sh 'docker push denizzzzp/day2-dz1:$DOCKER_TAGS'
         }
     } catch (e) {
         sh 'exit 1'
