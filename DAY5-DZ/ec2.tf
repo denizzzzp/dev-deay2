@@ -7,8 +7,8 @@ data "template_file" "user_data" {
   template = "${file("templates/user_data.tpl")}"
 
   vars {
-    package_to_install = "nginx"
-    TEXT = "DENIZZZP"
+    package_to_install = "nginx1.12"
+    text = "DENIZZZP"
   }
 }
 
