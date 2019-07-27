@@ -17,7 +17,7 @@ pipelineJob("my-first-pipeline") {
                 git {
                   remote {
                         github("denizzzzp/dev-deay2", 'https')
-                        branch("day4-dz")
+                        branch("master")
                   }
               }
         }
